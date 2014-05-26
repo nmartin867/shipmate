@@ -57,14 +57,22 @@
 <script src="scripts/directives/mongooseError.js"></script>
 <script src="scripts/services/authorization.js"></script>
 <script src="scripts/controllers/login.js"></script>
-<script src="../scripts/directives/game-canvas/canvas.js"></script>
 <script src="scripts/controllers/game.js"></script>
 <script src="scripts/services/image.js"></script>
 <!-- endbuild -->
 
+<!--Socket.IO-->
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io.connect('http://localhost');
 </script>
+<!--end socket.io-->
+
+<!--turbulenz game engine-->
+<script src="../scripts/turbulenz/debug/debug.js"></script>
+<script src="../scripts/turbulenz/webgl/turbulenzengine.js"></script>
+<script src="../scripts/turbulenz/webgl/graphicsdevice.js"></script>
+<script src="../scripts/turbulenz/draw2d.js"></script>
+<!--end turbulenz-->
 </body>
 </html>
