@@ -3,7 +3,9 @@
 var express = require('express'),
     path = require('path'),
     fs = require('fs'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose')
+
+
 
 /**
  * Main application file
@@ -35,9 +37,12 @@ require('./lib/config/express')(app);
 require('./lib/routes')(app);
 
 // Start server
-app.listen(config.port, config.ip, function () {
+var server = app.listen(config.port, config.ip, function () {
   console.log('Express server listening on %s:%d, in %s mode', config.ip, config.port, app.get('env'));
 });
+
+// Register Socket Listeners
+var messanger = require('./lib/socket/socket-messanger')(server);
 
 // Expose app
 exports = module.exports = app;
