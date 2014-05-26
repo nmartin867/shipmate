@@ -23,5 +23,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'SignupCtrl',
             templateUrl: 'partials/signup.html'
         })
+        .state('game', {
+            url: '/game',
+            controller: 'GameCtrl',
+            templateUrl: 'partials/game.html'
+        })
 
 });
