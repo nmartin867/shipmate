@@ -1,13 +1,11 @@
 'use strict';
 
-angular.module('shipMateApp')
-    .service('Image', function Image($http, $q) {
+angular.module('shipMateApp').service('Image', function Image($http, $q) {
         function getImageByName(imageName) {
-            var url = 'images/' + imageName;
+            var url = 'asset/' + imageName;
             var deferred = $q.defer();
             $http.get(url).then(function (response) {
-                var image = new Image(response.data);
-                deferred.resolve(image);
+                deferred.resolve(response.data);
             }, function () {
                 deferred.reject();
             });

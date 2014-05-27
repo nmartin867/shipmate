@@ -23,6 +23,8 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+
 </head>
 <body ng-app="shipMateApp">
 <!--[if lt IE 7]>
@@ -59,6 +61,7 @@
 <script src="scripts/controllers/login.js"></script>
 <script src="scripts/controllers/game.js"></script>
 <script src="scripts/services/image.js"></script>
+<script src="scripts/directives/gameCanvas.js"></script>
 <!-- endbuild -->
 
 <!--Socket.IO-->
@@ -68,11 +71,16 @@
 </script>
 <!--end socket.io-->
 
+
 <!--turbulenz game engine-->
 <script src="../scripts/turbulenz/debug/debug.js"></script>
 <script src="../scripts/turbulenz/webgl/turbulenzengine.js"></script>
 <script src="../scripts/turbulenz/webgl/graphicsdevice.js"></script>
 <script src="../scripts/turbulenz/draw2d.js"></script>
+
+<script src="../scripts/game/game.js"></script>
 <!--end turbulenz-->
+
+
 </body>
 </html>
